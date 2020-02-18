@@ -1,0 +1,23 @@
+<div class="ui centered three column grid">
+
+  <div class="column">
+
+      <!--    <div class="ui medium circular image">-->
+      <div class="ui medium circular image">
+        <img src="https://i.ytimg.com/vi/8Yy2kmqty5I/hqdefault.jpg" height="50%" width="50%">
+      </div>
+    <ul>
+      <% @form_result.each do |res| %>
+        <li>
+          <h3>Song: Name<%= res.track_name %></h3>
+          <audio controls>
+            <source src="<%= res.song_audio %>" type="audio/ogg">
+            <source src= "<%= res.song_audio %>" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

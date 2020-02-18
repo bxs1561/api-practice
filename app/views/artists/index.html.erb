@@ -1,0 +1,70 @@
+<!--<div class="ui grid center aligned">-->
+<!--  <div class="sixteen wide column">-->
+<!--  <div class="big ui search" id="search-bar">-->
+    <%#= form_tag(search_artist_path, :method => "get") do%>
+<!--        <div class="ui icon input">-->
+
+<!--    <input class="prompt" type="text" placeholder="Name" name="artist_name">-->
+          <%#= search_field_tag :search, params[:search], placeholder: "Name", name:"name" %>
+
+<!--          <i class="search icon"></i>-->
+<!--          <div class="input-group-btn">-->
+            <%#= submit_tag "search",:name => nil%>
+<!--          </div>-->
+<!--          <p>-->
+            <%#= text_field_tag :search, params[:search] %>
+            <%#= submit_tag "Search", :name => nil %>
+<!--          </p>-->
+<!--        </div>-->
+<!--  <div class="results">-->
+
+
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+        <%#end %>
+
+
+<%= render :file => 'songs/index' %>
+
+<h1>Nepali Artist</h1>
+<div class="ui three column grid">
+
+  <div class="column">
+
+    <div class="ui fluid image">
+
+      <a class="image" href="/song">
+
+        <!--    <div class="ui medium circular image">-->
+        <div class="ui medium circular image">
+          <img src="https://i.ytimg.com/vi/8Yy2kmqty5I/hqdefault.jpg">
+        </div>
+      </a>
+      <div class="content">
+        <b class="header">Ramkrishna Dhakal</b>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid image">
+
+      <a class="image" href="/song">
+        <!--    <div class="ui medium circular image">-->
+        <div class="ui medium circular image">
+          <img src="https://alchetron.com/cdn/narayan-gopal-458e4e30-2ac0-420e-8c3d-6a9bdb8aa50-resize-750.jpeg" width="100%" height="100%">
+        </div>
+      </a>
+      <div class="content">
+        <b class="header">Narayan Gopal</b>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
