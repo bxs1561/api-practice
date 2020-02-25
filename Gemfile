@@ -11,9 +11,10 @@ gem 'semantic-ui-sass'
 # gem 'sqlite3', '~> 1.4'
 group :production do
   gem "pg"
+  gem "activerecord-postgresql-adapter"
 end
 
-group :development, :test do
+group :development do
   gem 'sqlite3', '~> 1.4'
 end
 # Use Puma as the app server
