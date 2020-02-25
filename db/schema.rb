@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_16_220127) do
+ActiveRecord::Schema.define(version: 2020_02_20_190406) do
+
+  create_table "soccers", force: :cascade do |t|
+    t.string "titles"
+    t.string "url"
+    t.binary "thumbnail"
+    t.date "game_date"
+    t.string "competition_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "songs", force: :cascade do |t|
     t.string "name"

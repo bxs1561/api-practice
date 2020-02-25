@@ -8,7 +8,14 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'semantic-ui-sass'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
+group :production do
+  gem "pg"
+end
+
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'
+end
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

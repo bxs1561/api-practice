@@ -41,4 +41,34 @@
 </div>
 
 
+<script>
+    $('.ui form')
+        .form({
+            on: 'blur',
+            fields: {
+                email: {
+                    identifier  : 'email',
+                    rules: [
+                        {
+                            type   : 'email',
+                            prompt : 'Please enter a valid e-mail'
+                        }
+                    ]
+                },
+                // password: {
+                //     identifier  : 'password',
+                //     rules: [
+                //         {
+                //             type   : '',
+                //             prompt : 'Please enter a valid password'
+                //         }
+                //     ]
+                // },
 
+
+
+            }
+        })
+    ;
+
+</script>

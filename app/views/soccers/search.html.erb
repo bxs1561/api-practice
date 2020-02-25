@@ -1,0 +1,39 @@
+<div class="ui grid">
+  <div class="sixteen wide column">
+    <h1>Soccer Tournament</h1>
+    <%#@result.each do |re| %>
+      <%#if params[:search]!=re.titles %>
+<!--      <h>No Result</h>-->
+        <%#break %>
+        <%#else %>
+<!--            <h1>Soccer Tournament</h1>-->
+
+  <%#end %>
+
+      <%# end %>
+    <div>
+      <div class="ui stackable three cards">
+        <% @result.each do |res| %>
+          <div class="ui card">
+            <div class="content">
+              <div class="header">
+                <%= res.titles %>
+              </div>
+            </div>
+            <div class="extra content">
+              <iframe width="350" height="315"
+                      src="<%=res.url %>">
+              </iframe>
+              <p><%=res.game_date %></p>
+              <h5>League Title: <%=res.competition_name %></h5>
+            </div>
+            <p> <a href="<%= res.url %>" target="_blank">link to the full site</a> instead.</p>
+
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <br/>
+  </div>
+</div>
+

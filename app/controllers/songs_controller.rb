@@ -1,11 +1,17 @@
 class SongsController < ApplicationController
   def index
+
+  end
+  def search
     if params[:search].blank?
-      redirect_to search_artist_path
+      render :index
     else
-      @songs = Song.search(params[:search])
+      @searchs = params[:search]
+      @result = Song.all.where("(name) LIKE :search OR track_name LIKE :search", search:"%#{@searchs}%")
+    end
+    end
 
     end
-    end
-  end
+
+
 

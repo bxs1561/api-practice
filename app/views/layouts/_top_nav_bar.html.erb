@@ -1,4 +1,4 @@
-<div class="ui inverted large secondary menu" style="background-color: #4a69bb;">
+<div class="ui fixed inverted large secondary menu" style="background-color: #4a69bb;">
   <div class="ui container">
     <div class="header item" id="top-nav">
       <a class="<%= current_page?(root_path) ? "active" : '' %> item" href="<%= root_path %>">
@@ -7,14 +7,19 @@
     </div>
     <div class="right menu">
       <% if session[:user_id] %>
-        <a class="item">
-          About Us
+        <a class="<%= current_page?(artist_path) ? "active" : '' %> item" href="<%= artist_path %>">
+          <i class="user circle icon"></i>
+          Artist
+        </a>
+        <a class="<%= current_page?(soccer_search_path) ? "active" : '' %> item" href="<%= soccer_search_path %>">
+          <i class="futbol icon"></i>
+          Soccer
         </a>
         <a class="<%= current_page?(logout_path) ? "active" : '' %> item" href="<%= logout_path %>">
           <i class="user circle icon"></i>
           Log Out
         </a>
-      <% else %>
+    <% else %>
         <a class="<%= current_page?(login_path) ? "active" : '' %> item" href="<%= login_path %>">
           <i class="user circle icon"></i>
           Login

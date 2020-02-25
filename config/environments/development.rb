@@ -8,6 +8,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  gem 'sqlite3', '~> 1.4'
+
 
   # Show full error reports.
   config.consider_all_requests_local = true

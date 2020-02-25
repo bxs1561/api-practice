@@ -1,0 +1,45 @@
+
+
+<div class="ui centered three column grid">
+
+  <div class="column">
+
+    <!--    <div class="ui medium circular image">-->
+    <div class="ui medium circular image">
+      <img src="https://i.ytimg.com/vi/8Yy2kmqty5I/hqdefault.jpg" height="50%" width="50%">
+    </div>
+  </div>
+</div>
+<div class="ui grid">
+  <%#= render 'users/right_menu' %>
+  <div class="fifteen wide column">
+    <%=@result.each do|name| %>
+    <h1><%=name.name %></h1>
+      <%break %>
+      <%end %>
+    <div>
+      <div class="ui stackable three cards">
+        <% @result.each do |res| %>
+          <div class="ui card">
+            <div class="content">
+              <div class="header">
+                <%= res.track_name %>
+              </div>
+            </div>
+            <div class="extra content">
+              <audio controls>
+                            <source src="<%= res.song_audio %>" type="audio/ogg">
+                            <source src= "<%= res.song_audio %>" type="audio/mp3">
+                            Your browser does not support the audio element.
+                          </audio>
+<!--              <p> <%#= ride. %></p>-->
+<!--              <h5>Driver: <%#= ride[:driver] %></h5>-->
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <br/>
+  </div>
+</div>
+

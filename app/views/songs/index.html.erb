@@ -1,11 +1,11 @@
 <div class="ui grid center aligned">
   <div class="sixteen wide column">
     <div class="small ui search" id="search-bar">
-      <%= form_tag(song_path, :method => "get") do%>
+      <%= form_tag('/search') do%>
         <div class="ui icon input">
 
           <!--    <input class="prompt" type="text" placeholder="Name" name="artist_name">-->
-          <%= text_field_tag :search, params[:search], placeholder: "Name", name:"name" %>
+          <%= search_field_tag :search, params[:search], placeholder: "Name" %>
 
 <!--                    <i class="search icon"></i>-->
 <!--                    <div class="input-group-btn">-->
@@ -14,11 +14,9 @@
 
         </div>
         <div class="results">
-
-
         </div>
+            <%end %>
         </div>
-      <%end %>
         </div>
         </div>
 
