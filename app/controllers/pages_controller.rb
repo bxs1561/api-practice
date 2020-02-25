@@ -9,7 +9,7 @@ class PagesController < ApplicationController
       @parameter = params[:search].downcase
       #the below code print exact word
       # @results = User.all.where("lower(email) LIKE :search", search: @parameter)
-      @results = Song.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+      @results = Song.all.where("(name) LIKE :search", search: "%#{@parameter}%")
     end
 
   end
