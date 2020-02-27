@@ -8,6 +8,7 @@ class SongsController < ApplicationController
     else
       @searchs = params[:search]
       @result = Song.all.where("(name) LIKE :search OR track_name LIKE :search", search:"%#{@searchs}%")
+      # if params[:search].present?
     end
     end
 

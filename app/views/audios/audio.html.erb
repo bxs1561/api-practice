@@ -1,0 +1,51 @@
+<div class="ui very centered padded text container segment">
+  <h2>Sign Up</h2>
+  <form class="ui form" <%= form_for @audios,html: { multipart: true } do |form|%>
+
+    <div class="eight wide required field ">
+      <div class="required field">
+        <%= form.label :audio_title, '"Audio title"'%>
+        <div class="ui left icon input">
+          <i class="file audio icon"></i>
+          <%= form.text_field :audio_title,autocomplete: "off", require: false %>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <!--        <label> Full Name</label>-->
+        <%= form.label :audio_genre, 'Genre'%>
+        <div class="ui left icon input">
+          <i class="music icon icon"></i>
+          <%= form.text_field :audio_genre,autocomplete: "off" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="eight wide required field ">
+      <div class="required field">
+        <%= form.label :audio, "Audio"%>
+        <div class="ui left icon input">
+          <i class="file audio icon"></i>
+          <%=form.file_field :audio %>
+        </div>
+      </div>
+    </div>
+    <h5>Or</h5>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <%= form.label :audio_url%>
+        <div class="ui left icon input">
+          <i class="file audio icon"></i>
+          <%=form.url_field :audio_url %>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions" id="center-button">
+      <button class="ui blue button" type="submit" <%=form.submit %>upload</button>
+      <%#=user.submit :sumbit %>
+    </div><%end%>
+
+  </form>
+</div>

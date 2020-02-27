@@ -1,0 +1,52 @@
+<div class="ui very centered padded text container segment">
+  <h2>Sign Up</h2>
+  <form class="ui form" <%= form_for @videos,html: { multipart: true } do |form|%>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <!--        <label> Full Name</label>-->
+        <%= form.label :title, 'Title'%>
+        <div class="ui left icon input">
+          <i class="file video icon"></i>
+          <%= form.text_field :title,autocomplete: "off" %>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <!--        <label> Full Name</label>-->
+        <%= form.label :genre, 'Genre'%>
+        <div class="ui left icon input">
+          <i class="music icon"></i>
+          <%= form.text_field :genre,autocomplete: "off" %>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <%= form.label :video%>
+        <div class="ui left icon input">
+          <i class="file video icon"></i>
+          <%=form.file_field :video %>
+          <%#=form.collection_select(:video) %>
+
+        </div>
+      </div>
+    </div>
+    <h5>Or</h5>
+    <div class="eight wide required field ">
+      <div class="required field">
+        <%= form.label :url%>
+        <div class="ui left icon input">
+          <i class="file video icon"></i>
+          <%=form.url_field :url %>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions" id="center-button">
+      <button class="ui blue button" type="submit" <%=form.submit %>upload</button>
+      <%#=user.submit :sumbit %>
+    </div><%end%>
+
+  </form>
+</div>

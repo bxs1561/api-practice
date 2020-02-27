@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users
   resources :songs
+  resources :musics
+  resources :audios
+  resources :videos
   get '/sign-up', to: 'users#signup'
   post '/sign-up', to: 'users#create'
   get '/login', to: 'sessions#login'
@@ -14,6 +17,16 @@ Rails.application.routes.draw do
   post '/search', to: 'songs#search', as: 'search_song_post'
   get '/soccer-search', to: 'soccers#index'
   post '/soccer-search', to: 'soccers#search'
+  get '/video', to: 'videos#video'
+  get '/audio', to: 'audios#audio'
+  get '/videos', to: 'videos#index'
+  get '/video-search', to: 'videos#search'
+  post '/video-search', to: 'videos#search_result'
+
+
+  # post '/video', to: 'musics#create'
+
+
 
 
   # post '/search', to: 'songs#index', as: 'search_artist_post'

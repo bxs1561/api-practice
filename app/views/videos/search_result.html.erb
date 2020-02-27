@@ -1,0 +1,25 @@
+<%@result.each do |vid| %>
+  <%if vid.video.present?%>
+    <video controls width="640" height="480" src="<%= vid.video %>"></video>
+
+
+  <%end %>
+
+  <%#elsif vid.video_url%>
+  <%if vid.url.present? %>
+    <!--<h><%#=vid.video_title %></h>-->
+    <%videos=youtube_embed(vid.url) %>
+    <%=videos.html_safe%>
+    <%#break %>
+
+    <%#else %>
+    <!--    "no"-->
+    <%#=vid.url%>
+  <%end %>
+
+
+
+
+  <%#end %>
+<%end %>
+

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_20_190406) do
+ActiveRecord::Schema.define(version: 2020_02_27_015449) do
+
+  create_table "audios", force: :cascade do |t|
+    t.string "audio_title"
+    t.string "audio_genre"
+    t.string "audio_url"
+    t.binary "audio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "soccers", force: :cascade do |t|
     t.string "titles"
@@ -35,8 +44,15 @@ ActiveRecord::Schema.define(version: 2020_02_20_190406) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "reset_digest"
-    t.datetime "reset_sent_at"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.binary "video"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

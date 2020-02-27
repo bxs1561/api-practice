@@ -17,6 +17,10 @@ end
 group :development do
   gem 'sqlite3', '~> 1.4'
 end
+gem 'carrierwave'
+gem 'carrierwave-video'
+gem 'video_player'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
