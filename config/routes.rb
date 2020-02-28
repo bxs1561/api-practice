@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post '/soccer-search', to: 'soccers#search'
   get '/video', to: 'videos#video'
   get '/audio', to: 'audios#audio'
-  get '/videos', to: 'videos#index'
+  # get '/videos', to: 'videos#index'
   get '/video-search', to: 'videos#search'
   post '/video-search', to: 'videos#search_result'
 
