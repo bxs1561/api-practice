@@ -15,10 +15,15 @@
           <i class="futbol icon"></i>
           Soccer
         </a>
+        <a class="<%= current_page?(video_search_path) ? "active" : '' %> item" href="<%= video_search_path %>">
+          <i class="file video icon"></i>
+          Video
+        </a>
         <a class="<%= current_page?(logout_path) ? "active" : '' %> item" href="<%= logout_path %>">
           <i class="user circle icon"></i>
           Log Out
         </a>
+
     <% else %>
         <a class="<%= current_page?(login_path) ? "active" : '' %> item" href="<%= login_path %>">
           <i class="user circle icon"></i>
