@@ -14,9 +14,9 @@ group :production do
   gem "activerecord-postgresql-adapter"
 end
 
-group :development do
-  gem 'sqlite3', '~> 1.4'
-end
+# group :development do
+#   gem 'sqlite3', '~> 1.4'
+# end
 gem 'carrierwave'
 gem 'video_player'
 gem 'carrierwave-video'
