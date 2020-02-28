@@ -19,15 +19,21 @@
   <br/>
   <br/>
   <br/>
+  <%= yield %>
+
 </div>
 <%#= render 'layouts/footer' %>
 
+<!--<div class="ui container">-->
+  <%#= yield %>
+<!--</div>-->
 
 
 
-<div class="ui container">
-  <%= yield %>
-</div>
+
+<% if content_for(:home) %>
+  <%= yield :home %>
+<% end %>
 </body>
 <br/>
 <br/>

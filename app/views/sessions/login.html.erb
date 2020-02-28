@@ -1,3 +1,4 @@
+<body style="background-color:navajowhite;">
 <div class="ui very centered padded text container segment">
   <h2>Log in Portal</h2>
   <form class="ui form" <%= form_tag do%>
@@ -39,36 +40,4 @@
     <a href="/dashboard">Forgot your password?</a>
   </div>
 </div>
-
-
-<script>
-    $('.ui form')
-        .form({
-            on: 'blur',
-            fields: {
-                email: {
-                    identifier  : 'email',
-                    rules: [
-                        {
-                            type   : 'email',
-                            prompt : 'Please enter a valid e-mail'
-                        }
-                    ]
-                },
-                // password: {
-                //     identifier  : 'password',
-                //     rules: [
-                //         {
-                //             type   : '',
-                //             prompt : 'Please enter a valid password'
-                //         }
-                //     ]
-                // },
-
-
-
-            }
-        })
-    ;
-
-</script>
+</body>

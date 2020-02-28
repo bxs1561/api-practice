@@ -12,7 +12,7 @@ class ApisController < ApplicationController
 
 
   def api
-  response = HTTParty.get("https://itunes.apple.com/search?term=narayan+gopal")
+  response = HTTParty.get("https://itunes.apple.com/search?term=ramkrishna+dhakal")
   data = JSON.parse response.body
   results = data["results"]
   # @result = []

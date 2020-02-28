@@ -10,7 +10,10 @@
 
 
 <%#end %>
+        <%# end %>
 
+
+<body style="background-color:grey;">
 <div class="ui grid center aligned">
   <div class="sixteen wide column">
     <div class="small ui search" id="search-bar">
@@ -32,3 +35,14 @@
     </div>
   </div>
 </div>
+<div class="ui three stackable cards">
+  <div class="card">
+    <div class="image">
+      <%@form_result.each do |image| %>
+      <img src="<%=image.thumbnail %>">
+    </div>
+  </div>
+</div>
+      <%end %>
+      </body>
+

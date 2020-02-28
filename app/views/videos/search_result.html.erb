@@ -1,3 +1,4 @@
+<body style="background-color:navajowhite;">
 <%@result.each do |vid| %>
   <%if vid.video.present?%>
     <video controls width="640" height="480" src="<%= vid.video %>"></video>
@@ -22,4 +23,5 @@
 
   <%#end %>
 <%end %>
+</body>
 
