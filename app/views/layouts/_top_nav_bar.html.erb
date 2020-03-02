@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="right menu">
-      <% if logged_in? %>
+      <% if current_user %>
         <a class="<%= current_page?(artist_path) ? "active" : '' %> item" href="<%= artist_path %>">
           <i class="user circle icon"></i>
           Artist

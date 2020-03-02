@@ -16,21 +16,19 @@ class SessionsController < ApplicationController
   #   redirect_to '/'
   # end
   def create
-  user = User.find_by(email: params[:email])
+    user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-    if params[:remember_me]
-      cookies.permanent[:auth_token] = user.auth_token
-      # cookies[:auth_token] =true
+      if params[:remember_me]
+        cookies.permanent[:auth_token] = user.auth_token
+      else
+        # cookies[:auth_token] = user.auth_token
+        cookies.permanent[:auth_token] = user.auth_token
+        # session[:user_id] = user.id
+      end
       redirect_to root_path
     else
-      cookies[:auth_token] = user.auth_token
-      # cookies[:auth_token] =true
-
-
+      render :login
     end
-  else
-    redirect_to 'new', alert: "Invalid user/password combination"
-  end
   end
 
 def destroy

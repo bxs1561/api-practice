@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   has_secure_password
-  after_save { generate_token(:auth_token) }
+  before_create { generate_token(:auth_token) }
 
   #self refers to the object that is currently in context.
   def generate_token(column)
