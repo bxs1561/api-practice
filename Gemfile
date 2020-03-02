@@ -13,7 +13,7 @@ group :production do
   gem "pg"
   gem "activerecord-postgresql-adapter"
 end
-
+gem 'devise'
 group :development do
   gem 'sqlite3', '~> 1.4'
 end

@@ -20,10 +20,12 @@
       </div>
     </div>
     <div class="field">
-      <div class="ui checkbox">
-        <input type="checkbox" name="rememberCheckbox" tabindex="0" class="visible">
-        <label>Remember me</label>
-      </div>
+<!--      <div class="ui checkbox">-->
+<!--        <input type="checkbox" name="rememberCheckbox" tabindex="0" class="visible">-->
+<!--        <label>Remember me</label>-->
+<!--      </div>-->
+      <%= label_tag :remember_me %>
+      <%= check_box_tag :remember_me, 1, params[:remember_me] %>
     </div>
     <div class="actions" id="center-button">
       <button class="ui violet button" type="submit" <%=submit_tag %>>Login

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :musics
   resources :audios
   resources :videos
+  resources :sessions
   get '/sign-up', to: 'users#signup'
   post '/sign-up', to: 'users#create'
   get '/login', to: 'sessions#login'
