@@ -38,7 +38,6 @@ class CurrenciesController < ApplicationController
         key = "United Arab Emirates Dirham"
         @res<<{country: key,
                curr: val
-
         }
       when "AFN"
         key = "Afghanistan Afghani"
@@ -47,11 +46,8 @@ class CurrenciesController < ApplicationController
             curr: val
         }
       end
-
-
     end
       end
-
   end
 
 

@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'httparty'
+gem 'mailboxer', github: 'mailboxer/mailboxer'
+gem 'devise'
+gem 'devise_token_auth'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

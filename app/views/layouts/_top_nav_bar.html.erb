@@ -19,13 +19,13 @@
           <i class="file video icon"></i>
           Video
         </a>
-        <a class="<%= current_page?(logout_path) ? "active" : '' %> item" href="<%= logout_path %>">
-          <i class="user circle icon"></i>
-          Log Out
+        <a class="<%= current_page?(destroy_user_session_path	) ? "active" : '' %> item" <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+<!--          <i class="user circle icon"></i>-->
+<!--          Log Out-->
         </a>
 
     <% else %>
-        <a class="<%= current_page?(login_path) ? "active" : '' %> item" href="<%= login_path %>">
+        <a class="<%= current_page?(new_user_session_path	) ? "active" : '' %> item" href="<%= new_user_session_path	 %>">
           <i class="user circle icon"></i>
           Login
         </a>

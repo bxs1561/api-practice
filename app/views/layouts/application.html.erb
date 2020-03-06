@@ -19,6 +19,19 @@
   <br/>
   <br/>
   <br/>
+  <% flash.each do |name, msg| %>
+<div class="ui negative message">
+      <i class="close icon"></i>
+      <div class="header">
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+        <%#= msg %>
+      </div>
+    </div>
+
+<% end %>
+
+
+
   <%= yield %>
 
 </div>
@@ -40,5 +53,15 @@
 <br/>
 <br/>
 <%= render 'layouts/footer' %>
+<script>
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
+</script>
 
 </html>
