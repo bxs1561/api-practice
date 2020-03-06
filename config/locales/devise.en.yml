@@ -61,8 +61,11 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "Fix the following error before continuing:"
+        other: "Fix the following error before continuing:"
+
+#        one: "1 error prohibited this %{resource} from being saved:"
+#        other: "%{count} errors prohibited this %{resource} from being saved:"
 #en:
 #  devise:
 #    confirmations:

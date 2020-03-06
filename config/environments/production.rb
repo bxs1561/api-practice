@@ -3,8 +3,20 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+# doesn't have to be Heroku, but you get the idea.
+#   config.action_mailer.smtp_settings = {
+#       address: "smtp.gmail.com",
+#       domain: "gmail.com",
+#       port: 587,
+#       user_name: "jorge@example.org",
+#       password: "your_password",
+#       authentication: 'plain',
+#       enable_starttls_auto: true
+#   }
+#   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  # Eager load code on boot. This eager loads most of Rails and
+
+# Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.

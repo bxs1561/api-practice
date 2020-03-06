@@ -10,10 +10,38 @@ Rails.application.configure do
   config.eager_load = false
   gem 'sqlite3', '~> 1.4'
 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :enable_starttls_auto => true,
+      :address => 'smtp.gmail.com',
+      :port => '587',
+      :authentication => :plain,
+      # :domain => '',
+      :user_name => 'jamebuddha@gmail.com',
+                                          :password => 'bikidada'
+  }
+
+
+  #
+  #
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address              => "smtp.gmail.com",
+  #     :port                 => 587,
+  #     :user_name            => '<login>',
+  #     :domain               => 'localhost:3000',
+  #     :password             => '<password>',
+  #     :authentication       => 'plain',
+  #     :enable_starttls_auto => true  }
+  #
+
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

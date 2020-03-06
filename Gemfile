@@ -39,7 +39,6 @@ gem 'httparty'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
 gem 'devise'
 gem 'devise_token_auth'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
