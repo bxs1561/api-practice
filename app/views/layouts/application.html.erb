@@ -19,18 +19,17 @@
   <br/>
   <br/>
   <br/>
-  <% flash.each do |name, msg| %>
-<div class="ui negative message">
-      <i class="close icon"></i>
-      <div class="header">
-        <%#= content_tag :div, msg, id: "flash_#{name}" %>
-        <%= msg %>
-      </div>
-    </div>
 
-<% end %>
-
-
+  <%# flash.each do |name, msg| %>
+    <%#if name=="alert" %>
+<!--      <div class="ui negative message">-->
+<!--        <i class="close icon"></i>-->
+<!--        <div class="header">-->
+          <%#= content_tag :div, msg, id: "flash_#{name}" %>
+<!--        </div>-->
+<!--      </div>-->
+      <%#end %>
+    <%#end %>
 
   <%= yield %>
 

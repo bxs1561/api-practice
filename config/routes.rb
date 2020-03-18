@@ -48,6 +48,14 @@ Rails.application.routes.draw do
   # # get '/search' => 'pages#index', :as => 'search_page'
   # # post '/search' => 'pages#search', :as => 'search_page_post'
   #
-  #
+  # namespace :api, defaults: {format: 'json'} do
+  #   namespace :v1 do
+  #     get 'video-requests', to: 'ride_requests#index'
+  #     post 'video-request', to: 'ride_requests#create'
+  #     get 'look-up/:q', to: 'ride_requests#look_up'
+  #   end
+  # end
+
+
   root 'homes#home'
 end
