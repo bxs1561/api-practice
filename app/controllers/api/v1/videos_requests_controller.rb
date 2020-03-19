@@ -1,17 +1,19 @@
-class Api::V1::VideosController < ApplicationController
+class Api::V1::VideosRequestsController < ApplicationController
   skip_before_action :verify_authenticity_token
   def index
-    render json: Video.all
+    videos = Video.all
+    render json: videos
   end
   def create
-    video_request = Video.new(video)
+    video_request = Video.new(video_params)
     video_request.status = :requested
 
     #This are here just for testing purposes
-    # ride_request.pickup_time = DateTime.now
-    # ride_request.drop_time = DateTime.now + 40.minutes
-    # ride_request.pickup_address = Address.create(pickup_address_params)
-    # ride_request.dropoff_address = Address.create(dropoff_address_params)
+    video_request.title = Video.create(:title)
+    video_request.genre = Video.create(:genre)
+    video_request.video = Video.create(:video)
+    video_request.url = Video.create(:url)
+
 
     if video_request.save
       @data = {
